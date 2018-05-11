@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="index.html">Index</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="contactinfo.html">Contact Info</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="faq.html">FAQ's</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="trails.html">ATV Trails</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="passesandreservations.html">Passes/Reservations</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="photogallery.html">Photo Gallery</a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a class="w3-bar-item w3-button w3-padding-large" href="index.html">Index</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="contactinfo.html">Contact Info</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="faq.html">FAQ's</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="trails.html">ATV Trails</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="passesandreservations.html">Passes/Reservations</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="photogallery.html">Photo Gallery</a>
+    </div>
+    <div class="w3-display-container">
+        <img src="finalimgs/lake.jpg" alt="Lights" style="width:100%">
+ 
+        <div class="w3-padding w3-display-middle w3-xxlarge w3-text-black">ATV Trails</div>
+    <p></p>
+  
+    </div>
+    <div class= "w3-row">
+        <div class= "card w3-third">
+            <img src="finalimgs/trails.png" alt=trails />
+            <h3>Trying to find the ATV trails?</h3>
+            <p><a href="http://www.nhstateparks.org/uploads/pdf/Hopkinton-Everett_Trails-Map.pdf"> Click here!</a></p>
+        </div>
+
+        <div class= "card w3-third">
+            <img src="finalimgs/othertrails.jpg" alt="othertrails" />
+            <h3>Looking for other trails in NH?</h3>
+            <p><a href="http://www.nhstateparks.org/Activities/atving/trail-information.aspx"> Click Here! </a></p>
+        </div>
+
+        <div class= "card w3-third">
+            <img src="finalimgs/video.png" alt="video" />
+            <h3>Want to watch before you ride?</h3>
+            <p><a href="https://www.youtube.com/results?search_query=clough+state+park+nh+atv+trails"> Click Here! </a></p>
+        </div>
+    </div>
+    <div class="w3-container w3-center">
+  		<h2><a href="https://www.facebook.com/pages/Clough-State-Park/110431069011832">For more information, Check us out on FaceBook</a></h2>
+  	</div>
+  	<script>
+            var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+    </script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Information</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+      /*  nav{
+        			font-size: 24px;
+        			text-align: center;
+        			color:#480808;
+        		}
+        		body{
+        			text-align: center;
+        		 	font-family: sans-serif;
+        		}
+        		p{
+        			font-size: 25px;
+        
+        		}
+        		img{
+        			 height: 266px;
+        			 width: 400px;
+        		}
+        		ul{
+        			 display: inline;
+        			 font-size: 25px;
+        		}
+        		div{
+        			 height: 50px;
+        			 margin-right: auto;
+        			 margin-left: auto;
+        		}
+                .navheader
+                    {
+                        background: #b3d9ff;
+                        height: 50px;
+                        display:flex;
+                        border-radius: 25px 25px 0px 0px;
+                    }
+                .navdiv
+                    {
+                        margin:auto;
+                    }
+                .navbar
+                    {
+                        list-style-type: none;
+                        display:flex;
+                    }
+                .navbar-link
+                    {
+                        color: #878787;
+                        font-size: 24px;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                .header
+                    {
+                    height: 120px;
+                    font-size: 4em;
+                    text-shadow: 1px 1px 1px grey;
+                    color: #D2691E;
+                    background-image: url("FinalImgs/04_Clough-State-Park.jpg");
+                    }*/
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="index.html">Index</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="contactinfo.html">Contact Info</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="faq.html">FAQ's</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="trails.html">ATV Trails</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="passesandreservations.html">Passes/Reservations</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="photogallery.html">Photo Gallery</a>
+            
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a class="w3-bar-item w3-button w3-padding-large" href="index.html">Index</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="contactinfo.html">Contact Info</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="faq.html">FAQ's</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="trails.html">ATV Trails</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="passesandreservations.html">Passes/Reservations</a>
+        <a class="w3-bar-item w3-button w3-padding-large" href="photogallery.html">Photo Gallery</a>
+    </div>
+
+    <div class="w3-display-container">
+        <img src="finalimgs/lake.jpg" alt="Lights" style="width:100%">
+ 
+        <div class="w3-padding w3-display-middle w3-xxlarge w3-text-black">Contact Information</div>
+  
+    </div>
+    
+    <ul>
+        <li>Phone: 603-529-7112</li>
+        <li>Adress: 455 Clough Park Road Weare, NH 03281</li>
+        <li>Facebook: <a href="https://www.facebook.com/pages/Clough-State-Park/110431069011832">Clough State Park</a></li>
+        <li>Season Start: Memorial Day Weekend</li>
+        <li>Season End: Labor Day Weekend</li>
+        <li>Hours of Operation: Mon-Sun: 8am-7pm</li>
+    </ul>
+    <div>
+    </div>
+    <img src="finalimgs/phoneimg.jpg" alt="phone" />
+    <img src="finalimgs/cloughmap.jpg" alt="map" />
+    <h3>Interested in a Job?</h3>
+    <p>Apply here: <a href="https://www.nhstateparks.org/about-us/employment-opportunities.aspx">Application</a></p>
+    <script>
+            var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
+
+
+</body>
+
+</html>
